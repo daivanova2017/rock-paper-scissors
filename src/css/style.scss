@@ -146,11 +146,11 @@
 }
 
 .your-choice, .computer-choice{
-  @include flex();
+  @include flex(center, column);
 }
 
 .Result {
-  @include flex();
+  @include flex(center, column);
 
   font-size: 40px;
   font-weight: 700;
