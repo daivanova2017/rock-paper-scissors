@@ -1,0 +1,25 @@
+@mixin choiceAction($color, $size, $border){
+  margin: 35px;
+  border-radius: 50%;
+  @if $color == black{
+    background-color: $color;
+    opacity: .3;
+  }
+  @else{
+    background-color: white;
+    border: $border $color solid;
+  }
+  width: $size;
+  height: $size;
+  display: flex;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex($justify-content:center, $direction:row, $align-items:center){
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  flex-direction: $direction;
+}

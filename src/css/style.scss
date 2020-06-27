@@ -1,0 +1,180 @@
+@import "mixins";
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App{
+  color: white;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.Rules{
+  @include flex(flex-end);
+  margin: 0px 25px 16px;
+}
+
+.Rules-btn{
+  padding: 10px 40px;
+  background-color: hsl(237, 49%, 15%);
+  color: white;
+  text-transform: uppercase;
+  border: 1.6px rgba(255, 255, 255, 0.767) solid;
+  border-radius: 10px;
+  letter-spacing: 2px; 
+}
+
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+
+  &-content{
+    border-radius: 10px;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    color: $dark-text;
+    font-weight: 700;
+    font-size: 20px;
+
+    img{
+      cursor: pointer;
+      float: right;
+    }
+  }
+}
+
+.modal-content-head{
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.Score{
+  border: 2px hsl(217, 16%, 45%) solid;
+  border-radius: 10px;
+  @include flex(space-between);
+  width: 550px;
+  margin: 35px auto;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+.Score-points{
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px 15px;
+  @include flex(center, column);
+
+  &-text{
+    letter-spacing: 2px;
+    font-stretch: condensed;
+  }
+
+  p{
+    color: hsl(229, 64%, 46%);
+
+    &:not(.Score-points-text){
+      color: $dark-text;
+      font-size: 40px;
+      font-weight: 700;
+    }
+  }
+}
+
+.StartZone{
+  background-image: url(../images/bg-triangle.svg);
+  background-clip: padding-box;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  @include flex();
+  flex-wrap: wrap;
+  width: 450px;
+}
+
+.PlayZone{
+  margin-left: auto;
+  margin-right: auto;
+  width: 740px;
+  height: 400px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  
+  @include flex(space-between);
+
+  .Choice{
+    &-rock{
+      @include choiceAction($rock-color, $size-2, $border-2);
+    }
+    &-paper{
+      @include choiceAction($paper-color, $size-2, $border-2);
+    }
+    &-scissors{
+      @include choiceAction($scissors-color, $size-2, $border-2);
+    }
+    &-none{
+      @include choiceAction(black, $size-2, $border-2);
+    }
+  }
+}
+
+.Choice{
+  &-rock{
+    @include choiceAction($rock-color, $size-1, $border-1);
+  }
+  &-paper{
+    @include choiceAction($paper-color, $size-1, $border-1);
+  }
+  &-scissors{
+    @include choiceAction($scissors-color, $size-1, $border-1);
+  }
+}
+
+.your-choice, .computer-choice{
+  @include flex();
+}
+
+.Result {
+  @include flex();
+
+  font-size: 40px;
+  font-weight: 700;
+
+  &-header{
+    margin-bottom: 20px;
+  }
+  button{
+    padding: 10px 40px;
+    background-color: white;
+    border: 1.6px rgba(255, 255, 255, 0.767) solid;
+    color: $dark-text;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-stretch: condensed;
+    letter-spacing: 2px;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5); 
+  }
+}
+
+.Timer{
+  font-size: 40px;
+}
+
+.attribution { font-size: 11px; text-align: center;}
+.attribution a { color: hsl(228, 45%, 44%); }
