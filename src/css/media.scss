@@ -1,0 +1,185 @@
+.Rules{
+  @media all and (min-width: 1000px){
+    @include flex(flex-end);
+  }
+  @media all and (max-width: 999px){
+    @include flex();
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+@media all and (min-width: 600px){
+  .modal-content{
+    margin: auto;
+    border-radius: 10px;
+    padding: 20px;
+    &-head{
+      margin-bottom: 20px;
+      @include flex(space-between);
+    }
+  }
+
+  .Score{
+    width: 500px;
+
+    &-points{
+      padding: 5px 15px;
+      p:not(.Score-points-text){
+        font-size: 2em;
+      }
+    }
+  }
+
+  .Choice{
+    &-rock{
+      @include choiceAction($rock-color, $size-1, $border-1);
+    }
+    &-paper{
+      @include choiceAction($paper-color, $size-1, $border-1);
+    }
+    &-scissors{
+      @include choiceAction($scissors-color, $size-1, $border-1);
+    }
+  }
+
+  .StartZone{
+    width: 450px;
+  }
+}
+
+@media all and (max-width: 599px) and (min-width: 450px){
+  .modal-content{
+    margin: 0;
+    padding: 25px 100px 0px;
+    width: 100%;
+    height: 100%;
+    &-head{
+      margin-bottom: 30px;
+      @include flex(space-around);
+    }
+    &-rules{ width: 280px; }
+  }
+
+  .Score{
+    font-size: 0.8em;
+    width: 350px;
+
+    &-points{
+      padding: 5px 10px;
+      p:not(.Score-points-text){
+        font-size: 2em;
+      }
+    }
+
+    img{ width: 122px; }
+  }
+
+  .Choice{
+    &-rock{
+      @include choiceAction($rock-color, $size-1 - 20px, $border-1 - 5px, $choice-size - 20px, $choice-margin - 10px);
+    }
+    &-paper{
+      @include choiceAction($paper-color, $size-1 - 20px, $border-1 - 5px, $choice-size - 20px, $choice-margin - 10px);
+    }
+    &-scissors{
+      @include choiceAction($scissors-color, $size-1 - 20px, $border-1 - 5px, $choice-size - 20px, $choice-margin - 10px);
+    }
+  }
+
+  .StartZone{
+    width: 400px;
+    background-size: 205px;
+  }
+}
+
+@media all and (max-width: 449px) and (min-width: 340px){
+  .modal-content{
+    margin: 0;
+    padding: 10px 50px 0px;
+    width: 100%;
+    height: 100%;
+
+    &-head{
+      @include flex(space-around);
+    }
+
+    &-rules{ width: 230px; }
+  }
+
+  .Score{
+    font-size: 0.6em;
+    width: 240px;
+
+    &-points{
+      padding: 5px 8px;
+      p:not(.Score-points-text){
+        font-size: 1.5em;
+      }
+    }
+
+    img{ width: 82px; }
+  }
+
+  .Choice{
+    &-rock{
+      @include choiceAction($rock-color, $size-1 - 30px, $border-1 - 5px, $choice-size - 20px);
+    }
+    &-paper{
+      @include choiceAction($paper-color, $size-1 - 30px, $border-1 - 5px, $choice-size - 20px);
+    }
+    &-scissors{
+      @include choiceAction($scissors-color, $size-1 - 30px, $border-1 - 5px, $choice-size - 20px);
+    }
+  }
+
+  .StartZone{
+    width: 340px;
+    background-size: 205px;
+  }
+}
+
+@media all and (max-width: 339px){
+  .modal-content{
+    margin: 0;
+    padding: 15px 20px 0px;
+    width: 100%;
+    height: 100%;
+    
+    &-head{
+      @include flex(space-around);
+    }
+
+    &-rules{ width: 190px; }
+  }
+
+  .Score{
+    font-size: 0.6em;
+    width: 240px;
+
+    &-points{
+      padding: 5px 8px;
+      p:not(.Score-points-text){
+        font-size: 1.5em;
+      }
+    }
+
+    img{ width: 82px; }
+  }
+
+  .Choice{
+    &-rock{
+      @include choiceAction($rock-color, $size-1 - 40px, $border-1 - 7px, $choice-size - 25px, $choice-margin - 10px);
+    }
+    &-paper{
+      @include choiceAction($paper-color, $size-1 - 40px, $border-1 - 7px, $choice-size - 25px, $choice-margin - 10px);
+    }
+    &-scissors{
+      @include choiceAction($scissors-color, $size-1 - 40px, $border-1 - 7px, $choice-size - 25px, $choice-margin - 10px);
+    }
+  }
+
+  .StartZone{
+    background-size: 165px;
+  }
+}

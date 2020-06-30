@@ -1,5 +1,6 @@
 @import "mixins";
 @import "variables";
+@import "media";
 
 * {
   margin: 0;
@@ -10,10 +11,10 @@
   color: white;
   font-weight: 400;
   text-transform: uppercase;
+  font-size: $font-size;
 }
 
 .Rules{
-  @include flex(flex-end);
   margin: 0px 25px 16px;
 }
 
@@ -39,32 +40,32 @@
   background-color: rgba(0,0,0,0.4);
 
   &-content{
-    border-radius: 10px;
+    @include flex(flex-start, column);
     background-color: white;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
     color: $dark-text;
     font-weight: 700;
-    font-size: 20px;
 
-    img{
+    &-head-close{
       cursor: pointer;
-      float: right;
+    }
+
+    .modal-content-head{
+      margin-top: 5px;
+      width: 100%;
+      flex: 0.3; 
+    }
+
+    .modal-content-rules{
+      display: block;
+      margin: 0 auto;
     }
   }
-}
-
-.modal-content-head{
-  margin-top: 5px;
-  margin-bottom: 20px;
 }
 
 .Score{
   border: 2px hsl(217, 16%, 45%) solid;
   border-radius: 10px;
   @include flex(space-between);
-  width: 550px;
   margin: 35px auto;
   margin-bottom: 0;
   padding: 10px;
@@ -74,7 +75,6 @@
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.5);
   background-color: white;
   border-radius: 5px;
-  padding: 5px 15px;
   @include flex(center, column);
 
   &-text{
@@ -87,7 +87,7 @@
 
     &:not(.Score-points-text){
       color: $dark-text;
-      font-size: 40px;
+      font-size: 2em;
       font-weight: 700;
     }
   }
@@ -98,13 +98,10 @@
   background-clip: padding-box;
   background-position: center center;
   background-repeat: no-repeat;
-
   margin-left: auto;
   margin-right: auto;
-
   @include flex();
   flex-wrap: wrap;
-  width: 450px;
 }
 
 .PlayZone{
@@ -112,9 +109,7 @@
   margin-right: auto;
   width: 740px;
   height: 400px;
-  font-size: 20px;
   letter-spacing: 2px;
-  
   @include flex(space-between);
 
   .Choice{
@@ -133,26 +128,13 @@
   }
 }
 
-.Choice{
-  &-rock{
-    @include choiceAction($rock-color, $size-1, $border-1);
-  }
-  &-paper{
-    @include choiceAction($paper-color, $size-1, $border-1);
-  }
-  &-scissors{
-    @include choiceAction($scissors-color, $size-1, $border-1);
-  }
-}
-
 .your-choice, .computer-choice{
   @include flex(center, column);
 }
 
 .Result {
   @include flex(center, column);
-
-  font-size: 40px;
+  font-size: 2em;
   font-weight: 700;
 
   &-header{
@@ -173,8 +155,15 @@
 }
 
 .Timer{
-  font-size: 40px;
+  font-size: 2em;
 }
 
-.attribution { font-size: 11px; text-align: center;}
+.attribution { 
+  position: absolute; 
+  bottom: 5px; 
+  font-size: 0.5em; 
+  text-align: center;
+  left: 50%;
+  margin-left: -125px;
+}
 .attribution a { color: hsl(228, 45%, 44%); }

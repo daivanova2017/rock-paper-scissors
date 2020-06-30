@@ -25,9 +25,9 @@ function Rules() {
         <div className="modal-content">
           <div className="modal-content-head">
             <span className="modal-content-head-text">rules</span>
-            <img src={iconClose} alt="close" onClick={closeModal}/>
+            <img src={iconClose} className="modal-content-head-close" alt="close" onClick={closeModal}/>
           </div>
-          <img src={rules} alt="rules" />
+          <img src={rules} className="modal-content-rules" alt="rules" />
         </div>
       </div> 
     </div>
