@@ -107,25 +107,8 @@
 .PlayZone{
   margin-left: auto;
   margin-right: auto;
-  width: 740px;
-  height: 400px;
   letter-spacing: 2px;
-  @include flex(space-between);
-
-  .Choice{
-    &-rock{
-      @include choiceAction($rock-color, $size-2, $border-2);
-    }
-    &-paper{
-      @include choiceAction($paper-color, $size-2, $border-2);
-    }
-    &-scissors{
-      @include choiceAction($scissors-color, $size-2, $border-2);
-    }
-    &-none{
-      @include choiceAction(black, $size-2, $border-2);
-    }
-  }
+  flex-wrap: wrap;
 }
 
 .your-choice, .computer-choice{
@@ -133,9 +116,9 @@
 }
 
 .Result {
-  @include flex(center, column);
   font-size: 2em;
   font-weight: 700;
+  @include flex(center, column);
 
   &-header{
     margin-bottom: 20px;

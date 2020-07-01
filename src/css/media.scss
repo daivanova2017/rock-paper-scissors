@@ -1,13 +1,64 @@
-.Rules{
-  @media all and (min-width: 1000px){
+@media all and (min-width: 1000px){
+  .Rules{
     @include flex(flex-end);
   }
-  @media all and (max-width: 999px){
+  .PlayZone{
+    @include flex(space-between);
+    width: 740px;
+    height: 400px;
+
+    .Choice{
+      &-rock{
+        @include choiceAction($rock-color, $size-2, $border-2);
+      }
+      &-paper{
+        @include choiceAction($paper-color, $size-2, $border-2);
+      }
+      &-scissors{
+        @include choiceAction($scissors-color, $size-2, $border-2);
+      }
+      &-none{
+        @include choiceAction(black, $size-2, $border-2);
+      }
+    }
+  }
+}
+@media all and (max-width: 999px){
+  .Rules{
     @include flex();
     margin-top: 10px;
     margin-bottom: 20px;
   }
+  .PlayZone{
+    padding-top: 20px;
+    width: 480px;
+    @include flex(space-around);
+
+    .Choice{
+      &-rock{
+        @include choiceAction($rock-color, $size-2 - 30px, $border-2 - 5px);
+      }
+      &-paper{
+        @include choiceAction($paper-color, $size-2 - 30px, $border-2 - 5px);
+      }
+      &-scissors{
+        @include choiceAction($scissors-color, $size-2 - 30px, $border-2 - 5px);
+      }
+      &-none{
+        @include choiceAction(black, $size-2 - 30px, $border-2 - 5px);
+      }
+    }
+
+  }
+  .Result, .Timer{
+    order: 1;
+    margin-bottom: 50px;
+  }
+  .Timer{
+    padding: 0 50px 0;
+  }
 }
+
 
 @media all and (min-width: 600px){
   .modal-content{
@@ -91,6 +142,35 @@
     width: 400px;
     background-size: 205px;
   }
+
+  .PlayZone{
+    width: 420px;
+    font-size: 0.8em;
+
+    .Choice{
+      &-rock{
+        @include choiceAction($rock-color, $size-2 - 50px, $border-2 - 7px, $choice-size - 8px);
+      }
+      &-paper{
+        @include choiceAction($paper-color, $size-2 - 50px, $border-2 - 7px, $choice-size - 8px);
+      }
+      &-scissors{
+        @include choiceAction($scissors-color, $size-2 - 50px, $border-2 - 7px, $choice-size - 8px);
+      }
+      &-none{
+        @include choiceAction(black, $size-2 - 50px, $border-2 - 7px);
+      }
+    }
+
+  }
+
+  .Result, .Timer{
+    margin-bottom: 30px;
+  }
+  .Timer{
+    padding: 0 40px 0;
+  }
+
 }
 
 @media all and (max-width: 449px) and (min-width: 340px){
@@ -137,6 +217,34 @@
     width: 340px;
     background-size: 205px;
   }
+
+  .PlayZone{
+    width: 360px;
+    font-size: 0.6em;
+
+    .Choice{
+      &-rock{
+        @include choiceAction($rock-color, $size-2 - 70px, $border-2 - 9px, $choice-size - 12px);
+      }
+      &-paper{
+        @include choiceAction($paper-color, $size-2 - 70px, $border-2 - 9px, $choice-size - 12px);
+      }
+      &-scissors{
+        @include choiceAction($scissors-color, $size-2 - 70px, $border-2 - 9px, $choice-size - 12px);
+      }
+      &-none{
+        @include choiceAction(black, $size-2 - 70px, $border-2 - 9px);
+      }
+    }
+
+  }
+
+  .Result, .Timer{
+    margin-bottom: 30px;
+  }
+  .Timer{
+    padding: 0 40px 0;
+  }
 }
 
 @media all and (max-width: 339px){
@@ -181,5 +289,33 @@
 
   .StartZone{
     background-size: 165px;
+  }
+
+  .PlayZone{
+    width: 300px;
+    font-size: 0.6em;
+
+    .Choice{
+      &-rock{
+        @include choiceAction($rock-color, $size-2 - 90px, $border-2 - 12px, $choice-size - 20px);
+      }
+      &-paper{
+        @include choiceAction($paper-color, $size-2 - 90px, $border-2 - 12px, $choice-size - 20px);
+      }
+      &-scissors{
+        @include choiceAction($scissors-color, $size-2 - 90px, $border-2 - 12px, $choice-size - 20px);
+      }
+      &-none{
+        @include choiceAction(black, $size-2 - 90px, $border-2 - 12px);
+      }
+    }
+
+  }
+
+  .Result, .Timer{
+    margin-bottom: 30px;
+  }
+  .Timer{
+    padding: 0 30px 0;
   }
 }

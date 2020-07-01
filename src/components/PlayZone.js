@@ -26,7 +26,6 @@ function PlayZone(props) {
       max = Math.floor(max)
       return Math.floor(Math.random() * (max + 1))
     }
-
     return (
       <div className="PlayZone">
         <div className="your-choice">

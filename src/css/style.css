@@ -3,7 +3,67 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex-direction: row; } }
+    flex-direction: row; }
+
+  .PlayZone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 740px;
+    height: 400px; }
+    .PlayZone .Choice-rock {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: white;
+      border: 20px #dc2e4e solid;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-rock img {
+        width: 49px; }
+    .PlayZone .Choice-paper {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: white;
+      border: 20px #4865f4 solid;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-paper img {
+        width: 49px; }
+    .PlayZone .Choice-scissors {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: white;
+      border: 20px #ec9e0e solid;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-scissors img {
+        width: 49px; }
+    .PlayZone .Choice-none {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: black;
+      opacity: .3;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-none img {
+        width: 49px; } }
 @media all and (max-width: 999px) {
   .Rules {
     display: flex;
@@ -11,8 +71,74 @@
     justify-content: center;
     flex-direction: row;
     margin-top: 10px;
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
 
+  .PlayZone {
+    padding-top: 20px;
+    width: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row; }
+    .PlayZone .Choice-rock {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: white;
+      border: 15px #dc2e4e solid;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-rock img {
+        width: 49px; }
+    .PlayZone .Choice-paper {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: white;
+      border: 15px #4865f4 solid;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-paper img {
+        width: 49px; }
+    .PlayZone .Choice-scissors {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: white;
+      border: 15px #ec9e0e solid;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-scissors img {
+        width: 49px; }
+    .PlayZone .Choice-none {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: black;
+      opacity: .3;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-none img {
+        width: 49px; }
+
+  .Result, .Timer {
+    order: 1;
+    margin-bottom: 50px; }
+
+  .Timer {
+    padding: 0 50px 0; } }
 @media all and (min-width: 600px) {
   .modal-content {
     margin: auto;
@@ -141,7 +267,69 @@
 
   .StartZone {
     width: 400px;
-    background-size: 205px; } }
+    background-size: 205px; }
+
+  .PlayZone {
+    width: 420px;
+    font-size: 0.8em; }
+    .PlayZone .Choice-rock {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: white;
+      border: 13px #dc2e4e solid;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-rock img {
+        width: 41px; }
+    .PlayZone .Choice-paper {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: white;
+      border: 13px #4865f4 solid;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-paper img {
+        width: 41px; }
+    .PlayZone .Choice-scissors {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: white;
+      border: 13px #ec9e0e solid;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-scissors img {
+        width: 41px; }
+    .PlayZone .Choice-none {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: black;
+      opacity: .3;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-none img {
+        width: 49px; }
+
+  .Result, .Timer {
+    margin-bottom: 30px; }
+
+  .Timer {
+    padding: 0 40px 0; } }
 @media all and (max-width: 449px) and (min-width: 340px) {
   .modal-content {
     margin: 0;
@@ -208,7 +396,69 @@
 
   .StartZone {
     width: 340px;
-    background-size: 205px; } }
+    background-size: 205px; }
+
+  .PlayZone {
+    width: 360px;
+    font-size: 0.6em; }
+    .PlayZone .Choice-rock {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: white;
+      border: 11px #dc2e4e solid;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-rock img {
+        width: 37px; }
+    .PlayZone .Choice-paper {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: white;
+      border: 11px #4865f4 solid;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-paper img {
+        width: 37px; }
+    .PlayZone .Choice-scissors {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: white;
+      border: 11px #ec9e0e solid;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-scissors img {
+        width: 37px; }
+    .PlayZone .Choice-none {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: black;
+      opacity: .3;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-none img {
+        width: 49px; }
+
+  .Result, .Timer {
+    margin-bottom: 30px; }
+
+  .Timer {
+    padding: 0 40px 0; } }
 @media all and (max-width: 339px) {
   .modal-content {
     margin: 0;
@@ -274,7 +524,69 @@
       width: 24px; }
 
   .StartZone {
-    background-size: 165px; } }
+    background-size: 165px; }
+
+  .PlayZone {
+    width: 300px;
+    font-size: 0.6em; }
+    .PlayZone .Choice-rock {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: white;
+      border: 8px #dc2e4e solid;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-rock img {
+        width: 29px; }
+    .PlayZone .Choice-paper {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: white;
+      border: 8px #4865f4 solid;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-paper img {
+        width: 29px; }
+    .PlayZone .Choice-scissors {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: white;
+      border: 8px #ec9e0e solid;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-scissors img {
+        width: 29px; }
+    .PlayZone .Choice-none {
+      margin: 35px;
+      border-radius: 50%;
+      background-color: black;
+      opacity: .3;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center; }
+      .PlayZone .Choice-none img {
+        width: 49px; }
+
+  .Result, .Timer {
+    margin-bottom: 30px; }
+
+  .Timer {
+    padding: 0 30px 0; } }
 * {
   margin: 0;
   padding: 0; }
@@ -370,65 +682,8 @@
 .PlayZone {
   margin-left: auto;
   margin-right: auto;
-  width: 740px;
-  height: 400px;
   letter-spacing: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row; }
-  .PlayZone .Choice-rock {
-    margin: 35px;
-    border-radius: 50%;
-    background-color: white;
-    border: 20px #dc2e4e solid;
-    width: 150px;
-    height: 150px;
-    display: flex;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
-    align-items: center;
-    justify-content: center; }
-    .PlayZone .Choice-rock img {
-      width: 49px; }
-  .PlayZone .Choice-paper {
-    margin: 35px;
-    border-radius: 50%;
-    background-color: white;
-    border: 20px #4865f4 solid;
-    width: 150px;
-    height: 150px;
-    display: flex;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
-    align-items: center;
-    justify-content: center; }
-    .PlayZone .Choice-paper img {
-      width: 49px; }
-  .PlayZone .Choice-scissors {
-    margin: 35px;
-    border-radius: 50%;
-    background-color: white;
-    border: 20px #ec9e0e solid;
-    width: 150px;
-    height: 150px;
-    display: flex;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
-    align-items: center;
-    justify-content: center; }
-    .PlayZone .Choice-scissors img {
-      width: 49px; }
-  .PlayZone .Choice-none {
-    margin: 35px;
-    border-radius: 50%;
-    background-color: black;
-    opacity: .3;
-    width: 150px;
-    height: 150px;
-    display: flex;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
-    align-items: center;
-    justify-content: center; }
-    .PlayZone .Choice-none img {
-      width: 49px; }
+  flex-wrap: wrap; }
 
 .your-choice, .computer-choice {
   display: flex;
@@ -437,12 +692,12 @@
   flex-direction: column; }
 
 .Result {
+  font-size: 2em;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  font-size: 2em;
-  font-weight: 700; }
+  flex-direction: column; }
   .Result-header {
     margin-bottom: 20px; }
   .Result button {
