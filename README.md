@@ -25,7 +25,7 @@ Your users should be able to:
 
 ### Rules
 
-If the player wins, they gain 1 point. If the computer wins, the player loses one point.
+If the player wins, they gain 2 points. If there is a draw, the player gets 1 point. If the computer wins, the player gets nothing.
 
 #### Original
 
