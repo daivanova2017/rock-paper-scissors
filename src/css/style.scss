@@ -45,6 +45,11 @@
     color: $dark-text;
     font-weight: 700;
 
+    img{
+      object-fit: contain;
+      overflow: hidden;
+    }
+
     &-head-close{
       cursor: pointer;
     }

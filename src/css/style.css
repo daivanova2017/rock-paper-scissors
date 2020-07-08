@@ -206,6 +206,8 @@
     padding: 25px 100px 0px;
     width: 100%;
     height: 100%; }
+    .modal-content img {
+      margin-bottom: 20px; }
     .modal-content-head {
       margin-bottom: 30px;
       display: flex;
@@ -336,6 +338,9 @@
     padding: 10px 50px 0px;
     width: 100%;
     height: 100%; }
+    .modal-content img {
+      margin-top: 20px;
+      margin-bottom: 20px; }
     .modal-content-head {
       display: flex;
       align-items: center;
@@ -465,6 +470,9 @@
     padding: 15px 20px 0px;
     width: 100%;
     height: 100%; }
+    .modal-content img {
+      margin-top: 20px;
+      margin-bottom: 20px; }
     .modal-content-head {
       display: flex;
       align-items: center;
@@ -627,6 +635,9 @@
     background-color: white;
     color: #3b4363;
     font-weight: 700; }
+    .modal-content img {
+      object-fit: contain;
+      overflow: hidden; }
     .modal-content-head-close {
       cursor: pointer; }
     .modal-content .modal-content-head {
